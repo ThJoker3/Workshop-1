@@ -1,0 +1,5 @@
+console.log("Välkommen till parkeringshuset")
+console.log("Vänligen välj fordonstyp:")
+console.log("1. Small")
+console.log("2. Medium")
+console.log("3. Large")
