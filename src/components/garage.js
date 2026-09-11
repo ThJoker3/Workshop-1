@@ -5,6 +5,8 @@ export class Garage {
   #ratePerMinute
   #taxRate
   #ticket
+  #ticketCreatedAt
+  #ticketId
 
   constructor() {
     this.#ratePerMinute = 10
@@ -17,7 +19,7 @@ export class Garage {
     return this.#currentCapacity
   }
 
-  getRate() {
+  getRatePerMinute() {
     return this.#ratePerMinute
   }
 
@@ -48,6 +50,11 @@ export class Garage {
 
   openGate(ticket) {
     console.log("Gate opened for ticket:", ticket)
+  }
+
+  setTicket() {
+    this.#ticketCreatedAt = new Date() // set the ticket creation time to now
+    this.#ticketId = Math.floor(Math.random() * 10000000) // generate a random ticket ID
   }
 
 }

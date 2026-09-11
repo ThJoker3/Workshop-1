@@ -1,13 +1,9 @@
-@startuml
-
-Actor User
-Actor ParkinService
-Participant Vechicle
-Participant Garage
+@startuml parkingService
+title Parking Service class Diagram
 
 class Vechicle {
-  type: String,
-  ticket: Date,
+  ticketCreatedAt: Date,
+  ticketId: Number
 }
 
 class Garage {
