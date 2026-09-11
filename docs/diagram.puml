@@ -1,0 +1,25 @@
+@startuml
+
+Actor User
+Actor ParkinService
+Participant Vechicle
+Participant Garage
+
+class Vechicle {
+  type: String,
+  ticket: Date,
+}
+
+class Garage {
+  MaxCapacity: Number,
+  CurrentCapacity: Number,
+  Rate: Number,
+  CheckIn,
+  CheckOut,
+  Payment:(tax: Number, type: String, time: Date): price,
+  OpenGate:(payment: Number): Boolean,
+} 
+
+
+
+@enduml
