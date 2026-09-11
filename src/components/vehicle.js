@@ -7,8 +7,8 @@ export class Vehicle {
     this.#ticketId = null
   }
 
-  constructor(type) {
-    this.#ticketCreatedAt = null
+  constructor(ticketCreatedAt) {
+    this.#ticketCreatedAt = ticketCreatedAt
     this.#ticketId = null
   }
 
@@ -18,5 +18,9 @@ export class Vehicle {
 
   getTicketId() {
     return this.#ticketId
+  }
+
+  setTicket(ticketCreatedAt) {
+    this.ticketID = Math.floor(Math.random() * 10000000) // generate a random ticket ID
   }
 }
